@@ -1,0 +1,22 @@
+extends layout 
+
+block content
+    h1 Search book by ISBN
+
+    form(method="POST", action="/movie/search")
+        #form-group
+            h2 Enter movie name:
+            p (e.g. Harry potter)
+            
+            input.form-control(name="name", type="String")
+            br
+            if errors
+                each error in errors 
+                    p(style="color:red") #{error.msg}
+            br
+            input.btn.btn-primary(type="submit", value="Submit")
+    
+
+    if error
+        h3(style="color:red") Error: #{error}
+

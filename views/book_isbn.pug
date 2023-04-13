@@ -1,0 +1,24 @@
+extends layout 
+
+block content 
+    h1 Display Book 
+    img(src=imageLinks alt='thumbnail' style='width:200px')
+    h3 Book title: #{title}
+    h3 Description: #{description}
+    h3 Publisher: #{publisher}
+    h3 Published Date: #{publishedDate}
+   
+
+    //- //- p Rating: #{book.rating}
+    //- p Pages: #{book.pages}
+   
+    hr
+    //- //- If user logged in
+    //- if user
+    //-     //- Hide edit and delete unless book was posted by current user
+    //-     if user._id == book.posted_by
+    //-         //- Link to edit book
+    //- a.btn.btn-default(href="/book/edit/" + book._id) Edit Book
+    br
+    //- Link to delete book
+    //- a.btn.delete-book(href="#", data-id=book._id) Delete Book

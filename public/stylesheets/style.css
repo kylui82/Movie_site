@@ -1,0 +1,57 @@
+body {
+  padding: 50px;
+  /* font-family: Georgia, serif; */
+  font-family: 'Poppins';
+
+}
+h1{
+  font-size: 46px;
+}
+
+p {
+  font-size: 80;
+  font-weight: 900;
+  color: #232323;
+}
+
+table {
+  width: 40%;
+  border: 1px solid rgb(55, 55, 55);
+  padding: 10px;
+  line-height: 1.7;
+  background-color: rgb(234, 249, 255);
+}
+
+.form-control {
+  width: 25%;
+  border: 1px solid rgb(55, 55, 55);
+  padding: 14px;
+  margin:10px;
+  line-height: 1.5;
+  border-radius: 28px;
+  background-color: rgb(222, 222, 222);
+}
+
+.form-checkbox {
+
+  padding: 4px;
+
+  line-height: 1.5;
+
+  background-color: rgb(222, 222, 222);
+}
+
+.btn.btn-primary{
+  display: inline-block;
+  border-radius: 27px;
+  background-color: #1345a9;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 14px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}

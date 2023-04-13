@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    if user
+        h3 Welcome back #{user.name}!
+    h1 Movie store
+    //- Loop through all movies
+    each movie in movies 
+     
+        label Name: 
+        a(href="/movie/" + movie._id) #{movie.name}
+        p Description: #{movie.description}
+        p Year: #{movie.year}
+        p Rating: #{movie.rating}
+        p Genres:
+        ul
+        //- Loop through genres and print as list
+        each genre in movie.genres
+            li #{genre}
+
+        br
+        br

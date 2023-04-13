@@ -1,0 +1,34 @@
+extends layout 
+
+block content 
+    h2 Book details
+    h1 #{movie.name}
+    h1 #{name}
+    
+
+    table
+        tr
+            td year: #{movie.year}
+            td rating: #{movie.rating}
+        
+    h3 Description: 
+    p #{movie.description}
+    h3 Genre:
+    ul
+        //- Loop through genres and print as list
+        each genre in movie.genres
+            li #{genre}
+            
+    h3 Posted by: 
+    p #{posted_by}
+
+    br
+    //- If user logged in
+    if user
+        //- Hide edit and delete unless book was posted by current user
+        if user._id == movie.posted_by
+            //- Link to edit book
+            a.btn.btn-default(href="/movie/edit/" + movie._id) Edit movie
+            br
+            //- Link to delete book
+            a.btn.delete-movie(href="#", data-id=movie._id) Delete movie

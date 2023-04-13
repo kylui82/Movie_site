@@ -1,0 +1,16 @@
+nav
+    a(href="/") Home
+    br
+    if user
+        a(href="/movie/search") Search 
+        br
+        a(href="/movie/add") Add movie
+        br
+        a(href="/users/logout") Logout 
+    else
+        a(href="/users/register") Register 
+        br
+        a(href="/movie/search") Search 
+        br
+        a(href="/users/login") Login 
+    br

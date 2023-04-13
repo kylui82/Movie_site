@@ -1,0 +1,26 @@
+extends layout 
+
+block content 
+    if errors
+        p(style="color:red") #{errors}
+
+    h2 Display Search result
+    h1 #{movie.name}
+    h1 #{name}
+    
+
+    table
+        tr
+            td year: #{movie.year}
+            td rating: #{movie.rating}
+        
+    h3 Description: 
+    p #{movie.description}
+    h3 Genre:
+    ul
+        //- Loop through genres and print as list
+        each genre in movie.genres
+            li #{genre}
+            
+    h3 Posted by: 
+    p #{posted_by}
