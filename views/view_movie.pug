@@ -2,13 +2,15 @@ extends layout
 
 block content 
     h2 Book details
-    h1 #{movie.name}
-    h1 #{name}
-    
-
+    h1.inline #{movie.name}
+    |
+    |
+    |
+    |
+    |
+    p.inline-p  (#{movie.year})
     table
         tr
-            td year: #{movie.year}
             td rating: #{movie.rating}
         
     h3 Description: 
@@ -28,7 +30,7 @@ block content
         //- Hide edit and delete unless book was posted by current user
         if user._id == movie.posted_by
             //- Link to edit book
-            a.btn.btn-default(href="/movie/edit/" + movie._id) Edit movie
+            a.btn.btn-primary(href="/movie/edit/" + movie._id) Edit movie
             br
             //- Link to delete book
             a.btn.delete-movie(href="#", data-id=movie._id) Delete movie

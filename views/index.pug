@@ -3,20 +3,25 @@ extends layout
 block content
     if user
         h3 Welcome back #{user.name}!
-    h1 Movie store
+    h1 Movie site
     //- Loop through all movies
     each movie in movies 
      
-        label Name: 
-        a(href="/movie/" + movie._id) #{movie.name}
+        h2.inline
+            a(href="/movie/" + movie._id) #{movie.name}
+            |
+            |
+            |
+            |
+            |
+            p.inline-p  (#{movie.year})
         p Description: #{movie.description}
-        p Year: #{movie.year}
         p Rating: #{movie.rating}
         p Genres:
         ul
         //- Loop through genres and print as list
         each genre in movie.genres
             li #{genre}
-
         br
+        hr
         br

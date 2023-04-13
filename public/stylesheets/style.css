@@ -7,6 +7,11 @@ body {
 h1{
   font-size: 46px;
 }
+h3{
+  font-size: 22px;
+  font-weight: bold;
+  color: #1345a9;
+}
 
 p {
   font-size: 80;
@@ -15,11 +20,13 @@ p {
 }
 
 table {
-  width: 40%;
-  border: 1px solid rgb(55, 55, 55);
+  margin-top: 12px;
+  width: 6%;
+  border-radius: 28px;
+  border: 0px solid rgb(55, 55, 55);
   padding: 10px;
   line-height: 1.7;
-  background-color: rgb(234, 249, 255);
+  background-color: rgb(251, 160, 63);
 }
 
 .form-control {
@@ -48,10 +55,50 @@ table {
   border: none;
   color: #FFFFFF;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   padding: 14px;
-  width: 150px;
+  width: 120px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+}
+
+.btn.delete-movie{
+  display: inline-block;
+  border-radius: 27px;
+  background-color: #1345a9;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 14px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+}
+
+.nav-ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.nav-li {
+  display: inline-table;
+  padding-right: 20px;
+ 
+}
+
+
+.inline {
+  display: inline; 
+}
+.inline-p {
+  font-size: 14px;
+  display: inline; 
+  padding-right: 20px;
+
 }

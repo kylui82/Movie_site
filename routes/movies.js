@@ -32,8 +32,9 @@ router
     if (!errors || errors.isEmpty()) {
       console.log("error is empty")
       const query = req.body.name
-      let movie = await Movie.find({ name: query })
-
+     
+      let movie = await Movie.find({ name: { $regex: `^${query}`, $options: 'i' } })
+      console.log("movie: " ,movie)
       if (!movie[0]) {
         res.send("Could not find the movie")
       } else {
