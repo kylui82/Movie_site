@@ -78,8 +78,7 @@ app.use("/movie", movie_routes);
 
 app.use("/", async function (req, res) {
   let movies = await Movie.find({})
-  // add loggong
-  console.log(req);
+  
     if (!movies) {
       res.send("No movie found")
     } else {
