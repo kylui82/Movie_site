@@ -28,3 +28,14 @@ block content
 
     h3 Posted by: 
     p #{posted_by}
+
+    br
+    //- If user logged in
+    if user
+        //- Hide edit and delete unless book was posted by current user
+        if user._id == movie.posted_by
+            //- Link to edit book
+            a.btn.btn-primary(href="/movie/edit/" + movie._id) Edit movie
+            br
+            //- Link to delete book
+            a.btn.delete-movie(href="#", data-id=movie._id) Delete movie
