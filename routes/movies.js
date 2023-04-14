@@ -34,22 +34,24 @@ router
       const query = req.body.name
      
       let movie = await Movie.find({ name: { $regex: `^${query}`, $options: 'i' } })
-      console.log("movie: " ,movie)
+
       if (!movie[0]) {
         res.send("Could not find the movie")
       } else {
         let postedBy = movie[0].posted_by
-        console.log("postedBy: ", postedBy)
-        let user = await User.findById({ _id: postedBy });
-        console.log("user name: ", user.name)
-        console.log("movie[0]: ", movie[0])
-        if (!user) {
+       
+        let user1 = await User.findById({ _id: postedBy });
+       
+        console.log("req.user: ", req.user)
+
+        if (!user1) {
           res.send("Could not find user")
         }
         else {
           res.render("search_display", {
             movie: movie[0],
-            posted_by: user.name,
+            user: req.user, 
+            posted_by: user1.name,
           });
         };
       }
@@ -85,8 +87,10 @@ router
     // Get validation errors
     const errors = validationResult(req);
 
-    // let user1 = await User.findById({ _id: movie.posted_by });
-    //       console.log("user1 name:", user1.name)
+    console.log("res.locals.user")
+    console.log(res.locals.user)
+    console.log("res.user")
+    console.log(req.user)
 
     if (errors.isEmpty()) {
       // Create new movie from mongoose model
@@ -98,8 +102,6 @@ router
       movie.genres = req.body.genres;
       movie.rating = req.body.rating;
       movie.posted_by = req.user.id;
-
-
 
       // Save movie to MongoDB
       let result = await movie.save()

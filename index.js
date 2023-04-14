@@ -70,6 +70,8 @@ app.set("view engine", "pug");
 // used in templates
 app.get("*", function(req, res, next){
     res.locals.user = req.user || null;
+    console.log("*res.locals.user")
+    console.log(res.locals.user)  
     next();
 })
 
@@ -77,14 +79,14 @@ app.use("/users", user_routes);
 app.use("/movie", movie_routes);
 
 app.use("/", async function (req, res) {
-  let movies = await Movie.find({})
   
+  let movies = await Movie.find({})
+
     if (!movies) {
       res.send("No movie found")
     } else {
       res.render("index", {
-        movies: movies,
-       
+        movies: movies
       });
 }});
 
