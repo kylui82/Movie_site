@@ -8,4 +8,5 @@
 - Register, Login and Logout functions
 - Deploy application to Vercel : https://final-project-pi-wine.vercel.app
 
-<img width="432" alt="Screenshot 2023-04-26 at 5 06 27 PM" src="https://user-images.githubusercontent.com/101900083/234702688-738df465-bfd5-4537-addb-673c925dab09.png">
+
+<img width="463" alt="Screenshot 2023-04-26 at 5 17 48 PM" src="https://user-images.githubusercontent.com/101900083/234704993-bccbff0f-e596-433a-b56a-2a0f357ed4f8.png">
