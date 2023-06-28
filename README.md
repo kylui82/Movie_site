@@ -4,8 +4,10 @@
 
 # Description
 - Create Express app with Pug templates
-- Allow user to add, edit, search, and delete movie
-- Register, Login and Logout functions
+- Allow user to perform CRUD operations
+- Validate data from forms using Express-validator
+- Model application data using Mongoose
+- Authenticate user and Encrypt user password using Passport.js and Bcrypt.js for Register, Login and Logout functions
 - Deploy application to Vercel : https://final-project-pi-wine.vercel.app
 
 
